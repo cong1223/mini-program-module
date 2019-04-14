@@ -14,7 +14,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.6.5",
 	"appid": "wxb106c6424a07c1e2",
-	"projectname": "robot-mini-program",
+	"projectname": "mini-program-module",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},

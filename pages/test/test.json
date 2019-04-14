@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "navbar": "../../components/navbar/navbar"
+  },
+  "navigationBarTitleText": "测试标题",
+  "enablePullDownRefresh": true
+}
