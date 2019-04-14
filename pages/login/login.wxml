@@ -1,0 +1,42 @@
+<!--pages/login/login.wxml-->
+<view class="grace-padding">
+    <view style="margin-top:50px;" class="grace-center">
+        <image src='../../static/images/logo.jpg' style='width:68px; height:68px; border-radius:8px;'></image>
+    </view>
+    <form bindsubmit='loginNow'>
+        <view class="grace-form" style="margin-top:50rpx;">
+            <view class="grace-items item-border">
+                <view class="grace-label">
+                    <picker :value="pnpre" bindchange="changePre" range="{{pnpres}}" name="pn_pre">
+                        <text>+{{pnpre}}</text>
+                    </picker>
+                </view>
+                <input type="number" class='input' bindinput='phonenoInput' name="pn" placeholder="请输入手机号"></input>
+            </view>
+            <view class="grace-space-between item-border" style="margin-top:28rpx;">
+                <view class="grace-items" style="width:70%;">
+                    <view class="grace-label grace-center">验证码</view>
+                    <input type="number" class='input' name="yzm" placeholder="请输入验证码"></input>
+                </view>
+                <view style="width:28%;  margin-left:2%; padding:0;">
+                    <button type="primary" class="login-sendmsg-btn" bindtap='getVCode'>{{vcodeBtnName}}</button>
+                </view>
+            </view>
+        </view>
+        <button form-type='submit' type='primary' style='background:#00C777; margin-top:30px;'>
+            登录 <text class="grace-iconfont icon-arrow-right"></text>
+        </button>
+    </form>
+    <view class="grace-center" style="margin-top:20px; line-height:50rpx;" bindtap="reg">
+        还没有账号？点击注册
+    </view>
+    <!-- 第三方登录 -->
+    <view class="grace-title" style="margin-top:30px;">
+        <view class="grace-h5 grace-blod grace-center" style='color:#00C777'>第三方登录</view>
+    </view>
+    <view class="grace-login-three" style="margin-top:8px;">
+        <view class="grace-iconfont icon-weixin" bindtap="loginWithWx"></view>
+        <view class="grace-iconfont icon-qq" bindtap="loginWithQq"></view>
+        <view class="grace-iconfont icon-weibo" bindtap="loginWithWb"></view>
+    </view>
+</view>
